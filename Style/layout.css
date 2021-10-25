@@ -1,0 +1,72 @@
+
+.book-box {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    border: solid 1px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 0.205);
+    
+}
+
+.img-book {
+    width: 70%;
+    margin-top: 10px;
+    
+}
+
+.footer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 5px solid black;
+}
+
+.footer {
+    background-color: rgb(22, 19, 19);
+    margin-top: 25px;
+}
+
+.footer-box {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    border-bottom: 5px solid whitesmoke;
+}
+.search-box{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.about-us{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+align-items: center;
+}
+.login-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.forget-remmber{
+    margin-top: 20px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

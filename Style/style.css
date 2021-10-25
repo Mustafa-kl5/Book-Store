@@ -1,0 +1,108 @@
+.brand-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.button-m {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+p {
+    margin-top: 5px;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.social-media {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.search-input {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.footer-link {
+    border-right: 3px solid blue;
+}
+
+.wisdom-text {
+
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.body-img {
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.email-input {
+    width: 350px;
+    height: 55px;
+    border-radius: 30px;
+    background: bottom;
+    border-color: darkgray;
+    color: cornsilk;
+}
+
+.password-input {
+    margin-top: 20px;
+    width: 350px;
+    height: 55px;
+    border-radius: 30px;
+    background: bottom;
+    border-color: darkgray;
+    color: cornsilk;
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
+.form-check-label {
+    color: whitesmoke;
+}
+
+.button-login {
+    margin-top: 20px;
+    width: 350px;
+}
+
+.create-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.create-account {
+    margin-top: 20px;
+    width: 350px;
+    height: 55px;
+    border-radius: 30px;
+    background: bottom;
+    border-color: darkgray;
+    color: cornsilk;
+}
