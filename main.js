@@ -16,11 +16,13 @@
 }
 randombg();
  */
+/* This section for loding GIF while page loading*/
 $(window).on('load', function () {
   $(".se-pre-con").fadeOut(1000);;
 });
 
-///////////////
+/*this section for git data from json*/ 
+
 $(function () {
   $.getJSON("book.json", function (data) {
     var row = $('<div class="row my-2"></div>');
@@ -40,7 +42,7 @@ $(function () {
   });
 });
 
-//search section==>>
+/* This section for filter data from json file */
 $(document).ready(function(){
   $.ajaxSetup({ cache: false });
   $('#search').keyup(function(){
