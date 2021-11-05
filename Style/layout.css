@@ -55,11 +55,13 @@
 }
 
 .login-card {
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 200px;
+    height: 600px;
 }
 
 .forget-remmber {
