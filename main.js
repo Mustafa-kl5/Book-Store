@@ -16,6 +16,11 @@
 }
 randombg();
  */
+$(window).on('load', function () {
+  $(".se-pre-con").fadeOut(1000);;
+});
+
+///////////////
 $(function () {
   $.getJSON("book.json", function (data) {
     var row = $('<div class="row my-2"></div>');
@@ -27,42 +32,40 @@ $(function () {
         '<span class="p-name-price">' + 'Price :' + data[i].price + '</span>' +
         '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
         '</div>' + '</div>'));
-      if (i % 4 == 0) {
-        $('#box').append(row.clone(true));
+      if (i % 4 == 3) {
+        $('#box').append(row);
         row = $('<div class="row my-2"></div>');
       }
     }
   });
 });
 
-////////////////////////////////
-
-
-
-$.getJSON("book.json", function (data) {
-
-  $('#t1').keyup(function () {
-    var searchField = $('#t1').val();
-    for (var i in data) {
-      if (searchField == data[i].name) {
-        var row = $('<div class="row my-2"></div>');
-        row.append($('<div class="col-md-3">' +
-          '<div class="book-box">' +
-          '<img src= "image/book.jpg" class="img-j1" alt="book">' +
-          '<span class="p-name-price">' + 'Name :' + data[i].name + '</span>' +
-          '<span class="p-name-price">' + 'Price :' + data[i].price + '</span>' +
-          '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
-          '</div>' + '</div>'));
-
-
-        if (i % 4 == 0) {
-          $('#box-search').append(row.clone(true));
-          row = $('<div class="row my-2"></div>');
-        }
-
-      }
-
-    }
+//search section==>>
+$(document).ready(function(){
+  $.ajaxSetup({ cache: false });
+  $('#search').keyup(function(){
+   $('#result').html('');
+   $('#state').val('');
+   var searchField = $('#search').val();
+   var expression = new RegExp(searchField, "i");
+   $.getJSON('book.json', function(data) {
+    $.each(data, function(key, value){
+     if (value.name.search(expression) != -1 )
+     {
+      $('#result').append('<div class="col-md-3">' +
+      '<div class="book-box">' +
+      '<img src= "image/book.jpg" class="img-j1" alt="book">' +
+      '<span class="p-name-price">' + 'Name :' + value.name + '</span>' +
+      '<span class="p-name-price">' + 'Price :' + value.price + '</span>' +
+      '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
+      '</div>' + '</div>');
+     }
+    });   
+   });
   });
+  
+  
+ });
 
-});
+
+
