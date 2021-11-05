@@ -18,7 +18,7 @@ randombg();
  */
 /* This section for loding GIF while page loading*/
 $(window).on('load', function () {
-  $(".se-pre-con").fadeOut(1000);;
+  $(".se-pre-con").fadeOut(1500);;
 });
 
 /*this section for git data from json*/ 

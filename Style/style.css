@@ -59,30 +59,31 @@ input[type=text]:focus {
 }
 
 .email-input {
-    width: 350px;
+    
+    width: 300px;
     height: 55px;
     border-radius: 30px;
     background: bottom;
     border-color: darkgray;
-    color: cornsilk;
+    
 }
 
 .password-input {
     margin-top: 20px;
-    width: 350px;
+    width: 300px;
     height: 55px;
     border-radius: 30px;
     background: bottom;
     border-color: darkgray;
-    color: cornsilk;
+    
 }
 
 ::placeholder {
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
 
 .form-check-label {
-    color: whitesmoke;
+    color: rgb(3, 3, 3);
 }
 
 .button-login {
@@ -105,7 +106,7 @@ input[type=text]:focus {
     border-radius: 30px;
     background: bottom;
     border-color: darkgray;
-    color: cornsilk;
+   
 }
 
 .no-js #loader {
@@ -138,4 +139,17 @@ input[type=text]:focus {
 .add-cart-button {
     margin: 10px;
     width: 90%;
+}
+.form-login{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+   
+}
+h1{
+    margin-top: 5px; font-family: 'Comfortaa', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
