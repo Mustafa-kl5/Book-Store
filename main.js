@@ -18,7 +18,8 @@ randombg();
  */
 /* This section for loding GIF while page loading*/
 $(window).on('load', function () {
-  $(".se-pre-con").fadeOut(1500);;
+  $(".se-pre-con").fadeOut(1500);
+ 
 });
 
 /*this section for git data from json*/ 
@@ -27,13 +28,7 @@ $(function () {
   $.getJSON("book.json", function (data) {
     var row = $('<div class="row my-2"></div>');
     for (var i in data) {
-      row.append($('<div class="col-md-3">' +
-        '<div class="book-box">' +
-        '<img src= "image/book.jpg" class="img-j1" alt="book">' +
-        '<span class="p-name-price">' + 'Name :' + data[i].name + '</span>' +
-        '<span class="p-name-price">' + 'Price :' + data[i].price + '</span>' +
-        '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
-        '</div>' + '</div>'));
+      row.append(element(data[i].name,data[i].price));
       if (i % 4 == 3) {
         $('#box').append(row);
         row = $('<div class="row my-2"></div>');
@@ -54,13 +49,7 @@ $(document).ready(function(){
     $.each(data, function(key, value){
      if (value.name.search(expression) != -1 )
      {
-      $('#result').append('<div class="col-md-3">' +
-      '<div class="book-box">' +
-      '<img src= "image/book.jpg" class="img-j1" alt="book">' +
-      '<span class="p-name-price">' + 'Name :' + value.name + '</span>' +
-      '<span class="p-name-price">' + 'Price :' + value.price + '</span>' +
-      '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
-      '</div>' + '</div>');
+      $('#result').append(element(value.name ,value.price));
      }
     });   
    });
@@ -70,4 +59,23 @@ $(document).ready(function(){
  });
 
 
+function element(name ,price){
+  return '<div class="col-md-3">' +
+  '<div class="book-box">' +
+  '<img src= "image/book.jpg" class="img-j1" alt="book">' +
+  '<span class="p-name-price">' + 'Name :' + name + '</span>' +
+  '<span class="p-name-price">' + 'Price :' + price + '</span>' +
+  '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
+  '</div>' + '</div>' ;}
 
+
+  localStorage.setItem('islogin', false);
+   
+  $('#random').click  (function(){
+    
+if(localStorage.getItem('islogin')==false){
+  document.location.href="index.html"
+}else{
+  document.location.href="login page.html";
+}
+});
