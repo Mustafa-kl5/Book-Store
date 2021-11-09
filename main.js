@@ -69,13 +69,14 @@ function element(name ,price){
   '</div>' + '</div>' ;}
 
 
+function check(){
   localStorage.setItem('islogin', false);
-   
-  $('#random').click  (function(){
-    
-if(localStorage.getItem('islogin')==false){
-  document.location.href="index.html"
-}else{
-  document.location.href="login page.html";
+  if(localStorage.getItem('islogin')==false){
+    document.location.href="index.html"
+  }else{
+    document.location.href="login page.html";
+  }
+  
 }
-});
+
+ 
