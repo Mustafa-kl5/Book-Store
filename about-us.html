@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search for a book</title>
+    <title>About us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,14 +15,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://css.gg/facebook.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='https://css.gg/twitter.css' rel='stylesheet'>
-    <link href='https://css.gg/instagram.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Source+Code+Pro:wght@200&display=swap"
+        rel="stylesheet">
 </head>
 
-<body id="random" class="body-img">
-    <div class="se-pre-con"></div>
+<body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand"><img src="image/book-icon.png" alt="book-icon" class="brand-img">
@@ -33,26 +36,36 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="/search book.html" class="nav-item nav-link active">Search for a book</a>
-                    <a href="/about us.html" class="nav-item nav-link active">About us</a>
+                    <a href="/search-book.html" class="nav-item nav-link active">Search for a book</a>
+                    <a href="/about-us.html" class="nav-item nav-link active">About us</a>
                 </div>
                 <div class="navbar-nav ms-auto btn-group">
-                    <a class="btn btn-primary " href="/login page.html">Login</a>
-                    <a class="btn btn-secondary " href="/create account.html"> Create Account</a>
+                    <a class="btn btn-primary " href="/login-page.html">Login</a>
+                    <a class="btn btn-secondary " href="/create-account.html"> Create Account</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="container">
-        <div class="p-5 my-4 bg-light rounded-3  ">
-            <h2>Search for a book</h2>
-            <input class="search-input" type="text" placeholder="Search.." name="search" id="search">
+        <div class=" p-5 my-4 bg-light rounded-3  ">
+            <h2>About Us</h2>
+            <div class="row">
+                <div class="col
+                 about-us">
+                    <p class="wisdom-text">The m
+                        ore that you read, the more things you will know. The more that you
+                        learn, the more places you’ll go.</p>
+                    <p class="wisdom-text">There is more treasure in books than in all the pirate's loot on Treasure
+                        Island.</p>
+                </div>
+                <div class="col">
+                    <img src="image/book.jpg" alt="book" width="100%" height="100%">
+                </div>
+            </div>
         </div>
+    </div>
 
-    </div>
-    <div class="container">
-        <div class="row" id="result"></div>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
@@ -61,7 +74,10 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/Javascript/main.js"></script>
 
 </body>
 
