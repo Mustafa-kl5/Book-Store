@@ -19,7 +19,9 @@ randombg();
 /* This section for loding GIF while page loading*/
 $(window).on('load', function () {
   $(".se-pre-con").fadeOut(1500);
-
+if(localStorage.getItem("islogin")===false)
+document.location.href="login-page.html";
+ 
 });
 
 /*this section for git data from json*/
@@ -69,12 +71,13 @@ function element(name, price) {
     '<button type="button" id="add-cart" class="add-cart-button btn btn-primary  btn-block">Add to Cart</button>' +
     '</div>' + '</div>';
 }
-/**function check(){
-  localStorage.setItem('islogin', false);
-if(localStorage.getItem('islogin')!=true){
-  document.location.href="login page.html";
-}
-window.localStorage.clear();
-}
-  
-  window.addEventListener('load',check,false); */
+
+
+ 
+ document.getElementById('logout').onclick= function(){
+  localStorage.setItem("islogin",false);
+if(localStorage.getItem("islogin")===false)
+document.location.href="index.html";
+else
+document.location.href="login-page.html";
+ }
